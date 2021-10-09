@@ -5,52 +5,61 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="717.0" prefWidth="1208.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miProyecto1.FXMLpantalla2Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miProyecto1.FXMLpantalla2Controller">
    <children>
-      <Accordion layoutX="14.0" layoutY="69.0" />
-      <BorderPane layoutX="19.0" layoutY="49.0" prefHeight="644.0" prefWidth="1189.0">
-         <left>
-            <Accordion BorderPane.alignment="CENTER">
-              <panes>
-                <TitledPane animated="false" text="Inicio">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="Parametros">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" prefHeight="96.0" prefWidth="202.0" text="Roles">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-              </panes>
-            </Accordion>
-         </left>
-         <top>
-            <TabPane prefHeight="85.0" prefWidth="1189.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-              <tabs>
-                <Tab text="Inicio">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </Tab>
-                <Tab text="Ayuda">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </Tab>
-              </tabs>
-            </TabPane>
-         </top>
-      </BorderPane>
-      <Label layoutX="358.0" layoutY="14.0" text="BIENVENIDOA AL SISTEMA DE GESTION DE USUARIOS" textFill="#e42020">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
+      <TabPane layoutX="27.0" layoutY="67.0" prefHeight="697.0" prefWidth="918.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Lectura">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion layoutX="6.0" />
+                        <Button layoutX="368.0" layoutY="531.0" mnemonicParsing="false" onAction="#interactuarConDDBB" text="Mostrar Registros" />
+                        <Label layoutX="70.0" layoutY="21.0" text="FORMULARIO DE REPORTE DE USUARIOS DESDE LA BASE DE DAROS:" />
+                        <Label fx:id="lbl123" layoutX="56.0" layoutY="462.0" prefHeight="21.0" prefWidth="748.0" />
+                        <TextArea fx:id="txtarea" layoutX="45.0" layoutY="88.0" prefHeight="344.0" prefWidth="807.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Insercion">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="585.0" prefWidth="918.0">
+                     <children>
+                        <TextField fx:id="txtNombreusuario" layoutX="320.0" layoutY="140.0" />
+                        <TextField fx:id="txtPassword" layoutX="320.0" layoutY="181.0" />
+                        <TextField fx:id="txtNombre" layoutX="320.0" layoutY="223.0" />
+                        <TextField fx:id="txtApellidos" layoutX="320.0" layoutY="265.0" />
+                        <TextField fx:id="txtDireccion" layoutX="320.0" layoutY="306.0" />
+                        <TextField fx:id="txtTelefono" layoutX="320.0" layoutY="344.0" />
+                        <Button layoutX="328.0" layoutY="485.0" mnemonicParsing="false" onAction="#btnRealizarregistro" text="REALIZAR REGISTRO" />
+                        <Label layoutX="219.0" layoutY="145.0" text="nomUsuario" />
+                        <Label layoutX="237.0" layoutY="186.0" text="password" />
+                        <Label layoutX="239.0" layoutY="228.0" text="nombre" />
+                        <Label layoutX="239.0" layoutY="270.0" text="apellidos" />
+                        <Label layoutX="239.0" layoutY="311.0" text="direccion" />
+                        <Label layoutX="242.0" layoutY="349.0" text="telefono" />
+                        <Label layoutX="40.0" layoutY="36.0" text="FORMULARIO DE REGISTRO DE USUARIOS:" />
+                        <Label fx:id="lblinsertar" layoutX="202.0" layoutY="417.0" prefHeight="21.0" prefWidth="529.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Eliminacion">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtid" layoutX="372.0" layoutY="167.0" />
+                        <Label layoutX="332.0" layoutY="172.0" text="ID" />
+                        <Label layoutX="47.0" layoutY="44.0" text="INGRESAR EL ID DE USUARIO A ELIMINAR DE LA BASE DE DATOS:" />
+                        <Button layoutX="422.0" layoutY="385.0" mnemonicParsing="false" onAction="#btnEliminar" text="ELIMINAR" />
+                        <Label fx:id="lblmensaje" layoutX="221.0" layoutY="295.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="367.0" layoutY="23.0" text="JAVA STANDARD EDITION - PROYECTO" textFill="#d31424" wrapText="true" />
    </children>
 </AnchorPane>
