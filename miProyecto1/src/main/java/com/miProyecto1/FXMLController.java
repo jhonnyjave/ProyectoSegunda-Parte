@@ -1,3 +1,4 @@
+// proyecto segunda parte corriendo Jhonny J. V.
 package com.miProyecto1;
 /*
 Put header here
@@ -108,7 +109,5 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-
-	   
+    }	   
 }

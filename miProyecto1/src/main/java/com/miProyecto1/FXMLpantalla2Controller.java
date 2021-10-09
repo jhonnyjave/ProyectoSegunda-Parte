@@ -1,3 +1,4 @@
+// proyecto segunda parte corriendo Jhonny J. V.
 package com.miProyecto1;
 
 import java.sql.Connection;
@@ -48,10 +49,7 @@ public class FXMLpantalla2Controller {
     @FXML
     private Label lblinsertar;
 	
-//	@FXML
-//    public void interactuarConDDBB(ActionEvent event) {
-//		System.out.println("1");
-//	}
+
 	
 	@FXML
     public void btnRealizarregistro(ActionEvent event) throws SQLException {
@@ -206,32 +204,5 @@ public class FXMLpantalla2Controller {
 			
 			e.printStackTrace();
 		}
-	}
-	
-	private void btnRealizarregistro(String nu, String pass, String nom,String ap,String dir,String tel, int id) {
-//        String sql = "UPDATE usuario SET nomusuario = ? , "
-//                + "password = ? , "
-//                + "nombre = ? "
-//                + "apellidos = ? "
-//                + "direccion = ? "
-//                + "telefono = ? "
-//                + "WHERE id = ?";
-//
-//        try (PreparedStatement ps = con.prepareStatement(sql)) {
-//
-//            ps.setString(1, nombre);
-//            ps.setDouble(2, peso);
-//            ps.setInt(3, edad);
-//            ps.setInt(4, id);
-//            
-//            
-//            ps.executeUpdate();
-//            
-//        } catch (SQLException e) {
-//            System.out.println(e.getMessage());
-//        }
-    }
-	
-	
-	
+	}	
 }
